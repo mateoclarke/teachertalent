@@ -8,11 +8,9 @@ nav {
 
 	.navbar-link {
 		list-style: none;
-		margin: 0;
-		padding: 0;
 		line-height: 1.5em;
 		font-weight: 300;
-		font-size: 1.2em;
+		font-size: 1em;
 		letter-spacing: 0.03em;
 		color: $primary-color;
 
@@ -21,14 +19,16 @@ nav {
 		@include media($mediumish) {
 			@include span-columns (3);
 			@include shift(.5);
-			width: 120px;
+			width: 110px;
+			font-size: 1em;
 		}	
 
 		@include media($largish) {
 			@include span-columns (2);
 			@include shift(1);
+			font-size: 1.1em;
 
-			width: 130px;
+			width: 120px;
 			margin: 0 20px 0 20px;
 
 			&:first-child {
@@ -47,12 +47,25 @@ nav {
 	a {
 		text-decoration: none;
 	}
-}
 
-.profile-pic {
-	background-color: $accent-color;
-	border-radius: 100%;
-	float:right;
-	width: 1.7em;
-	height: 1.7em;
+
+	.profile-pic {
+		background-color: $accent-color;
+		border-radius: 100%;
+		float:right;
+		width: 1.7em;
+		height: 1.7em;
+	}
+
+
+	.nav-logo {
+		@extend %teacher-logo;
+		color: $primary-color;
+		border: 1px solid $primary-color;
+		max-height: $base-spacing/2;
+		margin: 0;
+		line-height: 0;
+		float: left;
+		margin-right: 3em;
+	}
 }

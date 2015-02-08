@@ -9,6 +9,7 @@
 <body>
 
 	<nav>
+		<%= link_to 'T T', root_path, class: "nav-logo" %>
 		<% if user_signed_in? %>
 		<!-- Logged in as <strong><%= current_user.email %></strong>. -->
 		<%= link_to "Profile", @user %>
@@ -21,40 +22,42 @@
 		<% end %>
 	</nav>
 
+	<div class = "wrapper">
+		<% if notice %>
+		<p class="alert alert-success"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+		<p class="alert alert-danger"><%= alert %></p>
+		<% end %>
+	</div>
 
-	<% if notice %>
-	<p class="alert alert-success"><%= notice %></p>
-	<% end %>
-	<% if alert %>
-	<p class="alert alert-danger"><%= alert %></p>
-	<% end %>
+		<%= yield %>
 
-	<%= yield %>
-	
+
 	<footer class="footer" role="contentinfo">
-  <div class="footer-logo">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
-  </div>
+	
+			<%= link_to 'Teacher Talent', root_path, class: "footer-logo" %>
 
-    <div class="footer-secondary-links">
-      <ul>
-        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-        <li><a href="javascript:void(0)">Privacy Policy</a></li>
-      </ul>
 
-      <ul class="footer-social">
-        <li><a href="javascript:void(0)">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
-          </a></li>
-        <li><a href="javascript:void(0)">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
-        </a></li>
-        <li><a href="javascript:void(0)">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
-        </a></li>
-      </ul>
-    </div>
-</footer>
+		<div class="footer-secondary-links">
+			<ul>
+				<li><a href="javascript:void(0)">Terms and Conditions</a></li>
+				<li><a href="javascript:void(0)">Privacy Policy</a></li>
+			</ul>
+
+			<ul class="footer-social">
+				<li><a href="javascript:void(0)">
+					<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+				</a></li>
+				<li><a href="javascript:void(0)">
+					<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+				</a></li>
+				<li><a href="javascript:void(0)">
+					<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+				</a></li>
+			</ul>
+		</div>
+	</footer>
 
 </body>
 </html>
