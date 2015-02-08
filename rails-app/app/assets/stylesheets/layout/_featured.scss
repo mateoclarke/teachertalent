@@ -34,6 +34,7 @@
 			max-width: 100px;
 			border-radius: 1000%;
 			display: inline;
+			box-shadow: 0px 1px 3px 1px lighten($primary-color, 71);
 			@include span-columns(2 of 6);		
 		}
 
