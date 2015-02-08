@@ -1,3 +1,34 @@
+// Color Palette 
+
+$white : #fff;
+$light-gray: #DDD;
+$gray : #808080;
+$medium-gray: #999;
+
+$light-blue: #89b6b7;
+$dark-blue: #5f838a;
+$blue: #111E40;
+
+$dark-gray: #222;
+$medium-gray: #999;
+$light-gray: #DDD;
+$mauve: #55404f;
+$yellow: #fdd68b;
+
+$pink: #FC687C;
+
+// Color Scheme
+
+$primary-color: $blue;
+
+$primary-color-dark: $dark-blue;
+$primary-color-light: lighten(#6a8189, 27);
+$secondary-color: $mauve;
+
+
+$accent-color: $pink;
+
+
 // Typography
 $sans-serif: $helvetica;
 $serif: $georgia;
