@@ -26,6 +26,15 @@ header {
 
 	p {
 		color: white;
+		font-size: .9em;
+		font-weight: 300;
+
+		@include media ($mediumish) {
+			font-size: 1em;
+		}
+		@include media ($largish) {
+			font-size: 1.2em;
+		}
 	}
 
 	@include media($mediumish) {
@@ -38,12 +47,6 @@ header {
 		padding-top:2em;
 	}
 
-	button {
-		@include span-columns(6);
-		@include omega(2n);
-		background-color: $accent-color;
-	}
-
 	h2 {
 		color: white;
 		font-size: 1em;
@@ -54,10 +57,10 @@ header {
 			font-size: 1.3em;
 		}
 	}
-	
+
 	a {
 		text-decoration:none;
-		
+
 		.main-title {
 			margin:0;	
 			color: $white;
@@ -73,8 +76,33 @@ header {
 	}
 }
 
-.subheading {
+.header-copy {
 	display: block;
+	margin-top: 1em;
 	@include span-columns(12);
+}
 
+.subheading {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	@include span-columns(12);
+}
+
+.header-button-wrapper {
+	@include span-columns(12);
+	display:block;
+
+	button {
+		@extend %button;
+		margin: .5em;
+		font-weight: 400;
+		
+		@include media ($mediumish) {
+			margin: 1.5em;
+		}
+		@include media ($largish) {
+			margin: 2em;
+		}
+
+	}
 }
