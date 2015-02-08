@@ -1,0 +1,58 @@
+nav {
+	$base-spacing: 1.5em !default;
+	$accent-color: $accent-color;
+	margin-bottom: -6px;
+	padding: $base-spacing/2;
+	width: 100%;
+	display: inline-block;
+
+	.navbar-link {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		line-height: 1.5em;
+		font-weight: 300;
+		font-size: 1.2em;
+		letter-spacing: 0.03em;
+		color: $primary-color;
+
+		@include span-columns (4);
+
+		@include media($mediumish) {
+			@include span-columns (3);
+			@include shift(.5);
+			width: 120px;
+		}	
+
+		@include media($largish) {
+			@include span-columns (2);
+			@include shift(1);
+
+			width: 130px;
+			margin: 0 20px 0 20px;
+
+			&:first-child {
+				margin-left: 40px;
+			}
+			&:last-child {
+				margin-left: 0;
+			}
+
+			&:hover {
+				color: $accent-color;
+			}
+		}	
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.profile-pic {
+	background-color: $accent-color;
+	border-radius: 100%;
+	float:right;
+	width: 1.7em;
+	height: 1.7em;
+}
