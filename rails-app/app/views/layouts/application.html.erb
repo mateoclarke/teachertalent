@@ -9,6 +9,7 @@
 <body>
 
 	<nav>
+		<%= link_to 'T T', root_path, class: "nav-logo" %>
 		<% if user_signed_in? %>
 		<!-- Logged in as <strong><%= current_user.email %></strong>. -->
 		<%= link_to "Profile", @user %>
@@ -35,7 +36,7 @@
 
 	<footer class="footer" role="contentinfo">
 	
-			<%= link_to 'Teacher Talent', root_path, class: "teacher-logo" %>
+			<%= link_to 'Teacher Talent', root_path, class: "footer-logo" %>
 
 
 		<div class="footer-secondary-links">

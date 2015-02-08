@@ -25,6 +25,7 @@
 
   a {
     text-decoration: none;
+    margin-bottom: 1em;
   }
 
   ul {
@@ -58,6 +59,8 @@
   }
 
   .footer-secondary-links {
+    padding-top: 2em;
+
     @include media($largish) {
       float: right;
     }
@@ -68,7 +71,7 @@
     }
 
     ul.footer-social {
-      margin-top: 1em;
+      margin-top: 2em;
 
       @include media($largish) {
         float: right;
@@ -100,26 +103,6 @@
   }
 }
 
-.teacher-logo {
-  margin: 1em;
-  border: 1px solid white;
-  border-radius: 3px;
-  padding: 1em;
-  opacity: .4;
-  color: $white;
-  color: white;
-  line-height: 2;
-  margin: 0em;
-  font-size: .8em;
-  @include transition(all .5s ease-in-out);
-
-  &:hover {
-    opacity: 1;
-    color: $accent-color;
-    border: 1px solid $accent-color;
-  }
-
-  @include media($largish) {
-    float: left;
-  }
+.footer-logo {
+ @extend %teacher-logo;
 }
