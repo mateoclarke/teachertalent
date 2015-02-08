@@ -23,3 +23,14 @@
 @import 'flashes';
 @import 'buttons';
 @import 'global';
+
+body, html {
+	height: 100%;
+}
+
+.page-wrap {
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
