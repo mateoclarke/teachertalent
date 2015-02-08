@@ -100,22 +100,26 @@
   }
 }
 
-.footer-logo {
-  margin-right: 1em;
+.teacher-logo {
+  margin: 1em;
   border: 1px solid white;
   border-radius: 3px;
   padding: 1em;
   opacity: .4;
+  color: $white;
+  color: white;
+  line-height: 2;
+  margin: 0em;
+  font-size: .8em;
+  @include transition(all .5s ease-in-out);
+
+  &:hover {
+    opacity: 1;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
 
   @include media($largish) {
     float: left;
   }
-  
-  p {
-    color: white;
-    line-height: 1;
-    margin: 0em;
-    font-size: .7em;
-  }
-
 }
