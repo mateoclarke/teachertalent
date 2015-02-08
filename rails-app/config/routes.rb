@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :schools
+
   devise_for :users
   # get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
