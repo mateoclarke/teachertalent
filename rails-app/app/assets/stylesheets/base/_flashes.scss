@@ -8,8 +8,13 @@
 
 %flash-notice {
   @include flash($notice-color);
+	text-align: center;
 }
 
 %flash-success {
   @include flash($success-color);
+}
+
+p.alert {
+	text-align: center;
 }
