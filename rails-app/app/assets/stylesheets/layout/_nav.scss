@@ -1,0 +1,73 @@
+nav {
+	$base-spacing: 1.5em !default;
+	$accent-color: $accent-color;
+	margin-bottom: -6px;
+	padding: $base-spacing/2;
+	width: 100%;
+	display: inline-block;
+
+	.navbar-link {
+		list-style: none;
+		line-height: 1.5em;
+		font-weight: 300;
+		font-size: 1em;
+		letter-spacing: 0.03em;
+		color: $primary-color;
+
+		@include span-columns (3);
+
+		@include media($mediumish) {
+			@include span-columns (3);
+			@include shift(.5);
+			width: 70px;
+			font-size: 1em;
+		}	
+
+		@include media($largish) {
+			@include span-columns (2);
+			@include shift(1);
+			font-size: 1.1em;
+
+			width: 120px;
+			margin: 0 20px 0 20px;
+
+			&:first-child {
+				margin-left: 40px;
+			}
+			&:last-child {
+				margin-left: 0;
+			}
+
+			&:hover {
+				color: $accent-color;
+			}
+		}	
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.profile-pic {
+		background-color: $accent-color;
+		border-radius: 100%;
+		float:right;
+		width: 1.7em;
+		height: 1.7em;
+	}
+
+	.nav-logo {
+		@extend %teacher-logo;
+		color: $primary-color;
+		border: 1px solid $primary-color;
+		max-height: $base-spacing/2;
+		margin: 0;
+		line-height: 0;
+		float: left;
+		margin-right: 1.5em;
+
+		@include media ($mediumish) {
+			margin-right: 2em;
+		}
+	}
+}

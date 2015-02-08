@@ -1,0 +1,51 @@
+body {
+	background: $white;
+}
+
+p {
+	color: $dark-gray;
+}
+
+.wrapper {
+	@include outer-container;
+}
+
+.hide {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.inline {
+	display: inline;
+}
+
+.submit {
+	text-align:center;
+}
+
+%teacher-logo {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 1em;
+  opacity: .4;
+  color: $white;
+  line-height: 2;
+  margin: 0em;
+  margin-bottom: 2em;
+
+  font-size: .8em;
+  @include transition(all .5s ease-in-out);
+
+  &:hover {
+    opacity: 1;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+
+  @include media($largish) {
+    float: left;
+  }
+}

@@ -1,0 +1,132 @@
+header {
+	background: $primary-color;
+	@include background-image(url("/images/header-background.jpg"));
+	background-position: center, center;
+	background-repeat: no-repeat;
+	text-align:center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	color: $white;
+
+	h1 {
+		@include span-columns(8);
+		@include shift(2);
+		border: 2px solid $white;
+		padding-right: .5em;
+		padding-left: .5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		text-align:center;
+		font-weight: 300;
+		border-radius: 3px;
+
+		@include media ($mediumish) {
+			@include span-columns(6);
+			@include shift(3);
+		}
+
+		@include media ($largish) {
+			@include span-columns(4);
+			@include shift(4);
+			font-size:2.5em;
+		}
+	}
+
+	p {
+		color: white;
+		font-size: .9em;
+		font-weight: 300;
+
+		@include media ($mediumish) {
+			font-size: 1em;
+		}
+		@include media ($largish) {
+			font-size: 1.2em;
+		}
+	}
+
+	@include media($mediumish) {
+		padding-bottom:4em;
+		padding-top:2em;
+	}
+
+	@include media($largish) {
+		padding-bottom:5em;
+		padding-top:2em;
+	}
+
+	h2 {
+		color: white;
+		font-size: 1em;
+		@include media($mediumish) {
+			font-size: 1.2em;
+		}
+		@include media($largish) {
+			font-size: 1.3em;
+		}
+	}
+
+	a {
+		text-decoration:none;
+
+		.main-title {
+			margin:0;	
+			color: $white;
+			font-size: 2.5em;
+
+			@include media($mediumish) {
+				font-size: 3em;
+			}
+			@include media($largish) {
+				font-size: 4em;
+			}
+		}
+	}
+}
+
+.header-copy {
+	display: block;
+	margin-top: 1em;
+	@include span-columns(12);
+	margin-bottom: 2em;
+
+	@include media ($mediumish) {
+		margin-bottom: .5em;
+	}
+	@include media ($largish) {
+		margin-bottom: .5em;
+	}
+}
+
+.subheading {
+	margin-top: 3em;
+	margin-bottom: 1em;
+	@include span-columns(12);
+
+	@include media ($mediumish) {
+		margin-bottom: .5em;
+	}
+	@include media ($largish) {
+		margin-bottom: .5em;
+	}
+}
+
+.header-button-wrapper {
+	@include span-columns(12);
+	display:block;
+
+	button {
+		@extend %button;
+		margin: 1em;
+		margin-bottom: 1.5em;
+		margin-top: .5em;
+		font-weight: 400;
+		
+		@include media ($mediumish) {
+			margin: 1.5em;
+		}
+		@include media ($largish) {
+			margin: 2em;
+		}
+	}
+}
