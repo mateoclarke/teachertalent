@@ -1,6 +1,9 @@
 // Bitters v0.10.0
 // http://bitters.bourbon.io
 
+//normalize
+@import 'normalize';
+
 // Variables
 @import 'variables';
 
@@ -19,3 +22,4 @@
 @import 'lists';
 @import 'flashes';
 @import 'buttons';
+@import 'global';
