@@ -1,0 +1,20 @@
+%flash-alert {
+  @include flash($alert-color);
+}
+
+%flash-error {
+  @include flash($error-color);
+}
+
+%flash-notice {
+  @include flash($notice-color);
+	text-align: center;
+}
+
+%flash-success {
+  @include flash($success-color);
+}
+
+p.alert {
+	text-align: center;
+}
