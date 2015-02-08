@@ -1,0 +1,80 @@
+.info-section {
+	background-color: #F0F5FF; 
+}
+
+.section-title {
+	text-align: center;
+	h2 {
+        font-size: 2.5em;
+		padding-top: 1em;
+		padding-bottom: 2em;
+	  	font-weight: 300;
+	}
+}
+
+.section-bullets {
+ 	@include outer-container();
+}
+
+.section-bullet {
+    @include span-columns(10);
+    @include shift(1);
+  	@include media($mediumish){
+ 		@include span-columns(10);
+	}
+	@include media($largish){
+ 		@include span-columns(4);
+        @include shift(0);
+	}
+}
+
+.bullet-text {
+    font-weight: 300;
+    font-size: 1.1em;
+    letter-spacing: 0.03em;
+    text-align: inherit;
+    @include span-columns(3 of 4);
+    margin-bottom: 3em;
+ 	@include media($mediumish){
+        @include span-columns(3 of 4);
+        margin-bottom: 3em;
+	}
+ 	@include media($largish){
+        @include span-columns(3 of 4);
+        margin-bottom: 5em;
+	}
+}
+
+.bullet-number {
+    @include span-columns(.5 of 4);
+    background: $accent-color;
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    padding: 3px 10px 11px;
+    @include media($mediumish) {
+        @include span-columns(.5 of 4);
+        background: $accent-color;
+        color: white;
+        font-weight: 300;
+        font-style: italic;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        padding: 3px 10px 11px;
+    }
+    @include media($largish) {
+        @include span-columns(1 of 4);
+        background: $accent-color;
+        color: white;
+        font-weight: 300;
+        font-style: italic;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        padding: 3px 10px 11px;
+    }
+}
