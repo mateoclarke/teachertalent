@@ -1,14 +1,3 @@
-<div>
-	<% if user_signed_in? %>
-	Logged in as <strong><%= current_user.email %></strong>.
-	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-	<% else %>
-	<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-	<% end %>
-</div>
-
 <header>
 	<div class= "wrapper">
 		<header class="hero">
@@ -43,8 +32,8 @@
 		</div>
 		<!-- end -->
 		<div class="featured">
-			<div class="featured-list">
-				<div class="section-title">Featured Schools</div>
+			<div class="featured-list1">
+				<h2 class= "section-title">Featured Schools</h2>
 				<div class="featured-item">
 					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
 					<div class="featured-text">
@@ -70,8 +59,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="featured-list">
-				<div class="section-title">Featured Teachers</div>
+			<div class="featured-list2">
+				<h2 class= "section-title">Featured Teachers</h2>
 				<div class="featured-item">
 					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
 					<div class="featured-text">
