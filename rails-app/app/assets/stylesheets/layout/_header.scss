@@ -11,10 +11,18 @@ header {
 
 	h1 {
 		@include span-columns(6);
-		@include span-columns(3);
+		@include shift(3);
 		border: 2px solid $white;
-		padding: 1.5em;
+		padding-right: .5em;
+		padding-left: .5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
 		text-align:center;
+
+		@include media ($largish) {
+			@include span-columns(4);
+			@include shift(4);
+		}
 	}
 
 	p {
@@ -35,6 +43,7 @@ header {
 	button {
 		@include span-columns(6);
 		@include omega(2n);
+		background-color: $accent-color;
 	}
 
 	h2 {
