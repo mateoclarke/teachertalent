@@ -167,7 +167,7 @@
 			vertical-align: -webkit-baseline-middle;
 		}
 	@include media($mediumish) {
-		@include button(flat, $base-accent-color);
+		@include button(flat, $accent-color);
 		display: inline-block;
 		font-size: 0.7em;
 		line-height: $base-line-height;
@@ -186,7 +186,7 @@
 	}
 	@include media($largish) {
 		@include shift(2);
-		@include button(flat, $base-accent-color);
+		@include button(flat, $accent-color);
 		display: inline-block;
 		font-size: 0.7em;
 		line-height: $base-line-height;
