@@ -1,96 +1,99 @@
 <div>
 	<% if user_signed_in? %>
-	  Logged in as <strong><%= current_user.email %></strong>.
-	  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-	  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+	Logged in as <strong><%= current_user.email %></strong>.
+	<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 	<% else %>
-	  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-	  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+	<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 	<% end %>
 </div>
 
-<header class="hero">
-	<h1>Teacher Talent</h1>
-	<p class="subheading">empowering grade schools to recruit the best teachers</h2>
-	
-	<button class="cta">List your school</button>
-	<button class="cta">List your talent</button>
-</header>
-<main>
-	<div class="info-section">
-		<div class="section-title">
-			<h2>How it works</h2>
-		</div>
-		<div class="section-bullets">
-			<div class="section-bullet">
-				<div class="bullet-number">1</div>
-				<div class="bullet-text"><p>Loreium ipson blah blah blah balh</p></div>
-			</div>
-			<div class="section-bullet">
-				<div class="bullet-number">2</div>
-				<div class="bullet-text"><p>Loreium ipson blah blah blah balh</p></div>
+<header>
+	<div class= "wrapper">
+		<header class="hero">
+			<h1>Teacher Talent</h1>
+			<div class="subheading"><p>empowering grade schools to recruit the best teachers</p></div>
 
-			</div>
-			<div class="section-bullet">
-				<div class="bullet-number">3</div>
-				<div class="bullet-text"><p>Loreium ipson blah blah blah balh</p></div>
-			</div>
+			<button class="cta">List your school</button>
+			<button class="cta">List your talent</button>
 		</div>
-	</div>
-	<div class="featured">
-		<div class="featured-list">
-			<div class="section-title">Featured Schools</div>
-			<div class="featured-item">
-				<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
-				<div class="featured-text">
-					<p>Magnet K-12</p>
-					<p>Austin, TX</p>
-					<p>Wins awards all the time.</p>
-				</div>
+	</header>
+	<main>
+		<div class="info-section">
+			<div class="section-title">
+				<h2>How it works</h2>
 			</div>
-			<div class="featured-item">
-				<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
-				<div class="featured-text">
-					<p>Magnet K-12</p>
-					<p>Austin, TX</p>
-					<p>Wins awards all the time.</p>
+			<div class="section-bullets">
+				<div class="section-bullet">
+					<div class="bullet-number">1</div>
+					<div class="bullet-text"><p>Loreium ipson blah blah blah balh</p></div>
 				</div>
-			</div>
-			<div class="featured-item">
-				<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
-				<div class="featured-text">
-					<p>Magnet K-12</p>
-					<p>Austin, TX</p>
-					<p>Wins awards all the time.</p>
+				<div class="section-bullet">
+					<div class="bullet-number">2</div>
+					<div class="bullet-text"><p>Loreium ipson blah blah blah balh</p></div>
+
+				</div>
+				<div class="section-bullet">
+					<div class="bullet-number">3</div>
+					<div class="bullet-text"><p>Loreium ipson blah blah blah balh</p></div>
 				</div>
 			</div>
 		</div>
-		<div class="featured-list">
-			<div class="section-title">Featured Teachers</div>
-			<div class="featured-item">
-				<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
-				<div class="featured-text">
-					<p>Magnet K-12</p>
-					<p>Austin, TX</p>
-					<p>Wins awards all the time.</p>
+		<div class="featured">
+			<div class="featured-list">
+				<div class="section-title">Featured Schools</div>
+				<div class="featured-item">
+					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
+					<div class="featured-text">
+						<p>Magnet K-12</p>
+						<p>Austin, TX</p>
+						<p>Wins awards all the time.</p>
+					</div>
+				</div>
+				<div class="featured-item">
+					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
+					<div class="featured-text">
+						<p>Magnet K-12</p>
+						<p>Austin, TX</p>
+						<p>Wins awards all the time.</p>
+					</div>
+				</div>
+				<div class="featured-item">
+					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
+					<div class="featured-text">
+						<p>Magnet K-12</p>
+						<p>Austin, TX</p>
+						<p>Wins awards all the time.</p>
+					</div>
 				</div>
 			</div>
-			<div class="featured-item">
-				<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
-				<div class="featured-text">
-					<p>Magnet K-12</p>
-					<p>Austin, TX</p>
-					<p>Wins awards all the time.</p>
+			<div class="featured-list">
+				<div class="section-title">Featured Teachers</div>
+				<div class="featured-item">
+					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
+					<div class="featured-text">
+						<p>Magnet K-12</p>
+						<p>Austin, TX</p>
+						<p>Wins awards all the time.</p>
+					</div>
 				</div>
-			</div>
-			<div class="featured-item">
-				<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
-				<div class="featured-text">
-					<p>Magnet K-12</p>
-					<p>Austin, TX</p>
-					<p>Wins awards all the time.</p>
+				<div class="featured-item">
+					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
+					<div class="featured-text">
+						<p>Magnet K-12</p>
+						<p>Austin, TX</p>
+						<p>Wins awards all the time.</p>
+					</div>
+				</div>
+				<div class="featured-item">
+					<img class="featured-img" src="https://placekitten.com/g/200/300"></img>
+					<div class="featured-text">
+						<p>Magnet K-12</p>
+						<p>Austin, TX</p>
+						<p>Wins awards all the time.</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</main>
+	</main>

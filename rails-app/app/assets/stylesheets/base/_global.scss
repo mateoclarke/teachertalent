@@ -1,0 +1,27 @@
+body {
+	background: $white;
+}
+
+p {
+	color: $dark-gray;
+}
+
+.wrapper {
+	@include outer-container;
+}
+
+.hide {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.inline {
+	display: inline;
+}
+
+.submit {
+	text-align:center;
+}
