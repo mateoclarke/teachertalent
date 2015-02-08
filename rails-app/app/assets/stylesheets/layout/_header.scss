@@ -1,3 +1,165 @@
+
+// Uncomment this for a sticky footer.
+//
+// .wrapper-for-content-outside-of-footer {
+//   min-height: 100%;
+//   height: auto !important;
+//   height: 100%;
+//   margin: 0 auto -4em;
+// }
+
+// html, body {
+//  height: 100%;
+// }
+
+// .wrapper-for-content-outside-of-footer:after {
+//   content: "";
+//   display: block;
+// }
+
+// .footer-2, .wrapper-for-content-outside-of-footer:after {
+//   height: 17em;
+
+//   @include media($large-screen) {
+//     height: 4em;
+//   }
+// }
+
+nav {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-spacing: 1.5em !default;
+  $accent-color: #477DCA !default;
+	margin-bottom: -6px;
+  
+  .navbar-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+		font-weight: 300;
+		font-size: 1.2em;
+		letter-spacing: 0.03em;
+		@include span-columns (4);
+		@include media($mediumish) {
+			@include span-columns (3);
+			@include shift(.5);
+		}	
+		@include media($largish) {
+			@include span-columns (2);
+			@include shift(1);
+			width: 200px;
+			margin: 0 20px 0 20px;
+			&:first-child {
+				margin-left: 40px;
+			}
+			&:last-child {
+				margin-left: 0;
+			}
+		}	
+	}
+  a {
+    text-decoration: none;
+  }
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-disclaimer-color: transparentize($footer-color, 0.6);
+
+  background: $primary-color-light;
+  padding: $base-spacing;
+  width: 100%;
+  display: inline-block;
+
+  .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 1em;
+
+    @include media($largish) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  } 
+
+  ul {
+    margin-bottom: 1em;
+    
+    @include media($largish) {
+      float: left;
+      line-height: 1.8em;
+      margin-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  ul li {
+    font-weight: 800;
+    padding-right: 1em;
+
+    @include media($largish) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-secondary-links {
+    @include media($largish) {
+      float: right;
+    }
+
+    li {
+      font-size: 0.8em;
+      font-weight: 300;
+    }
+
+    ul.footer-social {
+      margin-top: 1em;
+
+      @include media($largish) {
+        float: right;
+        margin-top: 0;
+      }
+
+      li {
+        font-size: 1em;
+        float: left;
+        line-height: 0;
+        padding-right: 0.7em;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        height: 1.6em;
+        opacity: 0.7;
+        padding: 1px;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
 header {
 	background: $primary-color;
 	@include background-image(url("/images/header-background.jpg"));
