@@ -1,0 +1,51 @@
+	.featured {
+		@include outer-container;
+	}
+
+	%featured-list {
+		font-weight: 300;
+		@include span-columns(12);
+		padding: 1em;
+		
+		@include media ($largish) {
+			@include span-columns(6);
+		}
+
+	}
+
+	.featured-list1 {
+		@extend %featured-list;
+		border-right: 1px solid $light-gray;
+	}
+
+	.featured-list2 {
+		@extend %featured-list;
+		background-color: desaturate(lighten($primary-color, 78), 32);
+
+		@include media ($largish) {
+			background-color: $white;
+		}
+	}
+
+	.featured-item {
+
+		img {
+			max-height: 100px;
+			max-width: 100px;
+			border-radius: 1000%;
+			display: inline;
+			@include span-columns(2 of 6);		
+		}
+
+		.featured-text {
+			@include span-columns(4 of 6);	
+			padding-bottom: 3em;	
+		}
+	}
+
+	.section-title {
+		text-align:center;
+		padding: 1.5em;
+		font-weight: 300;
+	}
+
